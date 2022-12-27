@@ -3,6 +3,47 @@
         background-image: url("images/header.png");
         background-size: cover;
     }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 250px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 5;
+    }
+
+    .dropdown-content a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        padding: 12px 16px;
+        text-align: left;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 20px;
+        font-weight: 500;
+        font-size: 16px;
+        font-family: inherit;
+        letter-spacing: -.03em;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .drop-link {
+        color: #9cb696;
+    }
 </style>
 
 <div class="header">
@@ -11,11 +52,43 @@
 <div class="navigation">
     <div class="container">
         <div class="row text-center">
-            <a href="/">HOME</a>
-            <a href="/events">EVENTS</a>
-            <a href="/membership">MEMBERSHIP</a>
-            <a href="/other-info">OTHER INFO</a>
-            <a href="/contact-us">CONTACT US</a>
+            <div class="dropdown">
+                <a class="drop-link" href="/">OUR PARK</a>
+                <div class="dropdown-content">
+                    <a href="#">ABOUT THE PARK</a>
+                    <a href="#">MAPS</a>
+                    <a href="#">TRAILS</a>
+                    <a href="#">PARK FACILITIES</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <!-- make not a, span or p -->
+                <a class="drop-link" href="/">EVENTS</a>
+                <div class="dropdown-content">
+                    <a href="#">SPECIAL EVENTS</a>
+                    <a href="#">ACTIVITIES</a>
+                    <a href="#">ANNUAL RAFFLE</a>
+                </div>
+            </div>
+            <a href="/events">MEMBERSHIP</a>
+            <div class="dropdown">
+                <!-- make not a, span or p -->
+                <a class="drop-link" href="/">OTHER INFO</a>
+                <div class="dropdown-content">
+                    <a href="#">OFFICERS & DIRECTORS</a>
+                    <a href="#">CONTRIBUTIONS</a>
+                    <a href="#">STRATEGIC PLAN</a>
+                    <a href="#">LINKS</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <!-- make not a, span or p -->
+                <a class="drop-link" href="/">CONTACT US</a>
+                <div class="dropdown-content">
+                    <a href="#">CONTACT</a>
+                    <a href="#">VOLUNTEER</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -157,3 +157,17 @@
 .mb50 {
     margin-bottom: 50px;
 }
+
+.flexbox-container {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+}
+.flexbox{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.inline-flex{
+  display:inline-flex;
+}
