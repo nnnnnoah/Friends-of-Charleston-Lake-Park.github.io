@@ -1,4 +1,12 @@
 <style>
+    @media(max-width:767px) {
+        .logo {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            max-width: 95%;
+        }
+    }
+
     .header {
         background-image: url("images/header.png");
         background-size: cover;
@@ -44,12 +52,33 @@
     .dropdown:hover .drop-link {
         color: #9cb696;
     }
+
+    .fa-hamburger {
+        color: #fff;
+        font-size: 30px;
+        text-align: right;
+    }
+
+    .mobile-nav-items {
+        padding-top: 5px;
+    }
+
+    .navigation-mobile #navLinks {
+        display: none;
+        background-color: cyan;
+        min-width: 250px;
+    }
+
+    .navigation-mobile #navLinks a {
+        display: block;
+        padding: 14px 16px;
+    }
 </style>
 
 <div class="header">
     <a href="/"><img class="logo center-block" src="images/logo.png"></a>
 </div>
-<div class="navigation">
+<div class="navigation hidden-xs">
     <div class="container">
         <div class="row text-center">
             <div class="dropdown">
@@ -92,3 +121,31 @@
         </div>
     </div>
 </div>
+<div class="navigation-mobile visible-xs">
+    <div class="container mobile-nav-container">
+        <div class="row mobile-nav-row">
+            <div class="col-xs-9">
+            </div>
+            <div class="col-xs-3 flexbox-container mobile-nav-items" onclick="hamburgerClick()">
+                <span class="mobile-nav-text">MENU</span>
+                <i class="fa-hamburger fa fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <div id="navLinks">
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+</div>
+
+<script>
+    function hamburgerClick() {
+        var x = document.getElementById("navLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
