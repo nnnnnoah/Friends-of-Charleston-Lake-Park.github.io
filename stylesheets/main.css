@@ -46,8 +46,7 @@
 
 .navigation-mobile {
     background-color: rgb(50, 46, 41);
-    height:40px;
-    background-image:url("../images/leaves.png");
+    height:10px;
 }
 
 .mobile-nav-container{
