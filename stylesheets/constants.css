@@ -1,3 +1,7 @@
+.mr0 {
+    margin-right: 0px;
+}
+
 .mr5 {
     margin-right: 5px;
 }
@@ -36,6 +40,10 @@
 
 .mr50 {
     margin-right: 50px;
+}
+
+.ml0 {
+    margin-left: 0px;
 }
 
 .ml5 {
@@ -78,6 +86,10 @@
     margin-left: 50px;
 }
 
+.mt0 {
+    margin-top: 0px;
+}
+
 .mt5 {
     margin-top: 5px;
 }
@@ -116,6 +128,10 @@
 
 .mt50 {
     margin-top: 50px;
+}
+
+.mb0 {
+    margin-bottom: 0px;
 }
 
 .mb5 {
@@ -163,11 +179,13 @@
     display: -webkit-flex;
     flex-wrap: wrap;
 }
-.flexbox{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
-.inline-flex{
-  display:inline-flex;
+
+.inline-flex {
+    display: inline-flex;
 }

@@ -132,6 +132,7 @@ h1 {
 .navigation-mobile {
     background-color: rgb(43 48 37);;
     height:10px;
+    padding-bottom:40px;
 }
 
 .mobile-nav-container{
