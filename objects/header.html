@@ -65,16 +65,37 @@
 
     .navigation-mobile #navLinks {
         display: none;
-        background-color: cyan;
-        z-index:2;
-        position:fixed;
-        width:100%;
-        margin-top:5px;
+        background-color: #f1f1f1;
+        z-index: 2;
+        position: fixed;
+        width: 100%;
+        margin-top: 5px;
     }
 
     .navigation-mobile #navLinks a {
         display: block;
         padding: 14px 16px;
+    }
+
+    .navigation-mobile .drop-link {
+        font-size: 16px;
+        color: #202020;
+    }
+
+    #park-dropdown,
+    #events-dropdown,
+    #info-dropdown,
+    #contact-dropdown {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        z-index: 999;
+        padding-left: 15px;
+        width: 100%;
+    }
+
+    .mobile-header-link {
+        color:#9cb696;
     }
 </style>
 
@@ -83,17 +104,66 @@
     <div class="navigation-mobile visible-xs">
         <div class="container mobile-nav-container">
             <div class="row mobile-nav-row">
-                <div class="col-xs-9">
+                <div class="col-xs-10">
                 </div>
-                <div class="col-xs-3 flexbox-container mobile-nav-items" onclick="hamburgerClick()">
+                <div class="col-xs-2 flexbox-container mobile-nav-items" onclick="hamburgerClick()">
                     <i class="fa-hamburger fa fa-bars"></i>
                 </div>
             </div>
         </div>
         <div id="navLinks">
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+            <a class="drop-link" id="park-heading" onclick="parkClick()">OUR PARK</a>
+            <div id="park-dropdown">
+                <div class="col-xs-6">
+                    <a class = "mobile-header-link" href="/about">ABOUT THE PARK</a>
+                </div>
+                <div class="col-xs-6">
+                    <a class = "mobile-header-link" href="/maps">MAPS</a>
+                </div>
+                <div class="col-xs-6">
+                    <a class = "mobile-header-link" href="/trails">TRAILS</a>
+                </div>
+                <div class="col-xs-6">
+                    <a class = "mobile-header-link" href="/facilities">PARK FACILITIES</a>
+                </div>
+            </div>
+            <a class="drop-link" id="events-heading" onclick="eventsClick()">EVENTS</a>
+            <div id="events-dropdown">
+                <div class="col-xs-6 text-center">
+                    <a class = "mobile-header-link" href="/events">SPECIAL EVENTS</a>
+                </div>
+                <div class="col-xs-6 text-center">
+                    <a class = "mobile-header-link" href="/activities">ACTIVITIES</a>
+                </div>
+                <div class="col-xs-12 text-center">
+                    <a class = "mobile-header-link" href="/raffle">ANNUAL RAFFLE</a>
+                </div>
+            </div>
+            <a class="drop-link" href="/membership">MEMBERSHIP</a>
+            <a class="drop-link" id="info-heading" onclick="infoClick()">OTHER INFO</a>
+            <div id="info-dropdown">
+                <div class="col-xs-6">
+                    <a class = "mobile-header-link" href="/board">BOARD</a>
+                </div>
+                <div class="col-xs-6">
+                    <a class = "mobile-header-link" href="/contributions">SPECIAL THANKS</a>
+                </div>
+                <div class="col-xs-6">
+                    <a class = "mobile-header-link" href="/get-involved">GET INVOLVED</a>
+                </div>
+                <div class="col-xs-6">
+                    <a class = "mobile-header-link" href="/links">LINKS</a>
+                </div>
+            </div>
+            <a class="drop-link" id="contact-heading" onclick="contactClick()">CONTACT US</a>
+            <div id="contact-dropdown">
+                <div class="col-xs-6">
+                    <a href="/contact">CONTACT</a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="/volunteer">VOLUNTEER</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -111,17 +181,17 @@
             </div>
             <div class="dropdown">
                 <!-- make not a, span or p -->
-                <a class="drop-link" href="/">EVENTS</a>
+                <a class="drop-link" href="/events">EVENTS</a>
                 <div class="dropdown-content">
-                    <a href="#">SPECIAL EVENTS</a>
-                    <a href="#">ACTIVITIES</a>
-                    <a href="#">ANNUAL RAFFLE</a>
+                    <a href="/events">SPECIAL EVENTS</a>
+                    <a href="/activities">ACTIVITIES</a>
+                    <a href="/raffle">ANNUAL RAFFLE</a>
                 </div>
             </div>
             <a href="/membership">MEMBERSHIP</a>
             <div class="dropdown">
                 <!-- make not a, span or p -->
-                <a class="drop-link" href="/">OTHER INFO</a>
+                <a class="drop-link" href="/board">OTHER INFO</a>
                 <div class="dropdown-content">
                     <a href="/board">OFFICERS & DIRECTORS</a>
                     <a href="/contributions">SPECIAL THANKS</a>
@@ -142,12 +212,77 @@
 </div>
 
 <script>
-    function hamburgerClick() {
+    //write code for closing other header when one is clicked. don't want too many options on the screen at once.
+    //finish rest of functions for changing color on active.
+
+    function hamburgerClick()
+    {
         var x = document.getElementById("navLinks");
-        if (x.style.display === "block") {
+        if (x.style.display === "block")
+        {
             x.style.display = "none";
-        } else {
+        } else
+        {
             x.style.display = "block";
         }
+    }
+
+    function parkClick()
+    {
+        var x = document.getElementById("park-dropdown");
+        var y = document.getElementById("park-heading");
+        if (x.style.display === "block")
+        {
+            x.style.display = "none";
+            y.style.color = "#202020";
+            y.style.fontWeight = 400;
+        } else
+        {
+            x.style.display = "block";
+            y.style.color = "#4e7c48";
+            y.style.fontWeight = 600;
+        }
+    }
+
+    function eventsClick()
+    {
+        var x = document.getElementById("events-dropdown");
+        if (x.style.display === "block")
+        {
+            x.style.display = "none";
+        } else
+        {
+            x.style.display = "block";
+        }
+
+        var y = document.getElementById("events-heading");
+    }
+
+    function infoClick()
+    {
+        var x = document.getElementById("info-dropdown");
+        if (x.style.display === "block")
+        {
+            x.style.display = "none";
+        } else
+        {
+            x.style.display = "block";
+        }
+
+        var y = document.getElementById("info-heading");
+    }
+
+    function contactClick()
+    {
+        var x = document.getElementById("contact-dropdown");
+        if (x.style.display === "block")
+        {
+            x.style.display = "none";
+        } else
+        {
+            x.style.display = "block";
+        }
+
+        var y = document.getElementById("contact-heading");
     }
 </script>

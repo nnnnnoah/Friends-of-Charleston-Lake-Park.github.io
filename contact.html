@@ -23,6 +23,46 @@
             opacity: 0;
             transition: opacity 1s;
         }
+        form {
+            margin: 0 auto;
+        }
+
+        @media(min-width:768px){
+        form {
+            margin: 0 auto;
+            width: 600px;
+        }
+        
+        input[type=text] {
+            width: 100%;
+        }
+    }
+
+    @media(max-width:767px){
+        input[type=text] {
+            width: 100%;
+            margin-bottom:10px;
+        }
+    }
+
+    input[type=submit] {
+            padding:5px;
+            padding-left:20px;
+            padding-right:20px;
+            color:#fff;
+            background: rgb(63,99,68);
+            background: linear-gradient(0deg, rgba(63,99,68,1) 0%, rgba(66,126,74,1) 100%);
+            border:1px #aaa solid;
+            border-radius:5px;
+            transition: all .5s;
+            }
+
+            input[type=submit]:hover {
+            background: rgb(63,99,68);
+            background: linear-gradient(0deg, rgb(77, 121, 83) 0%, rgb(77, 146, 86) 100%);
+            transition: all .5s;
+            }
+
     </style>
 </head>
 
@@ -36,18 +76,93 @@
                     <h2 class="mb20">Contact Us</h2>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mt30">
                 <div class="col-xs-12">
                     <div class="text-center">
+                        <p>You cannot make campsite reservations through this site. For the Ontario Parks Reservation
+                            system, click <a href="https://www.ontarioparks.com/en" target="_blank">here</a>.</p>
+                        <p>If you want to discuss volunteering, or make a general enquiry, please connect with us at <a
+                                href="mailto:stevepage@kos.net">stevepage@kos.net</a></p>
+                        <br>
+                        <h4>To get in touch about the Park, about contributing or volunteering, just use this form:</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt30">
+                <div class="col-xs-12">
+                    <div class="form-container">
                         <form action="https://formsubmit.co/noahmiller@hotmail.ca" method="POST">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required><br><br>
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required><br><br>
-                            <label for="message">Message:</label><br>
-                            <textarea id="message" name="message" required></textarea><br><br>
-                            <input type="submit" value="Submit">
-                          </form>
+                            <div class="col-xs-12">
+                                <label for="name">Name <span style="color:red;">*</span></label><br>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <input type="text" id="first" name="first" placeholder="First" required>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <input type="text" id="last" name="last" placeholder="Last" required>
+                            </div>
+                            <div class="col-xs-12 mt30">
+                                <label for="address">Address <span style="color:red;">*</span></label><br>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <input type="text" id="line1" name="line1" placeholder="Line 1" required>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <input type="text" id="line2" name="line2" placeholder="Line 2 (optional)">
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <input type="text" id="city" name="city" placeholder="City" required class="mt10">
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <input type="text" id="state/province" name="state/province"
+                                    placeholder="State / Province" class="mt10">
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <input type="text" id="zip/postal" name="zip/postal" placeholder="ZIP / Postal Code"
+                                    class="mt10">
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <input type="text" id="country" name="country" placeholder="Country" class="mt10">
+                            </div>
+                            <div class="col-xs-12 mt30">
+                                <label for="address">Contact <span style="color:red;">*</span></label><br>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <input type="text" id="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 mt30">
+                                <label for="address">Membership <span style="color:red;">*</span></label><br>
+                                <input type="radio" id="individual" name="subscription" value="10">
+                                <label for="individual">Individual ($10)</label><br>
+
+                                <input type="radio" id="family" name="subscription" value="15">
+                                <label for="family">Family ($15)</label><br>
+
+                                <input type="radio" id="corporate" name="subscription" value="50">
+                                <label for="corporate">Corporate ($50)</label>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 mt30">
+                                <label for="address">I/We would also like to donate:</label><br>
+                                <input type="text" id="donation" name="donation" placeholder="Donation $">
+                            </div>
+                            <div class="col-xs-12 mt30 text-center">
+                                <label for="address">Confirmation <span style="color:red;">*</span></label><br>
+                            </div>
+                            <div class="col-xs-12">
+                                <input type="text" id="signature" name="signature" placeholder="Signature"
+                                    style="width:100%;" required><br><br>
+                                <input type="checkbox" id="discussion" name="involvement">
+                                <label for="discussion" class="hidden-xs">I would like to discuss my involvement. Please contact me.</label>
+                                <label for="discussion" class="visible-xs">I would like to discuss my involvement.</label>
+                            </div>
+                            <div class="col-xs-12 mt30 text-center">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
