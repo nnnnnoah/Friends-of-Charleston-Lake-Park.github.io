@@ -4,6 +4,7 @@
             padding-top: 15px;
             padding-bottom: 15px;
             max-width: 95%;
+            -webkit-filter: drop-shadow(0 0 0.2rem grey);
         }
     }
 
@@ -27,7 +28,7 @@
     }
 
     .dropdown-content a {
-        color: black;
+        color: #121212;
         text-decoration: none;
         display: block;
         padding: 12px 16px;
@@ -35,7 +36,7 @@
         margin-left: 0px;
         margin-right: 0px;
         padding-left: 20px;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 16px;
         font-family: inherit;
         letter-spacing: -.03em;
@@ -67,7 +68,7 @@
         display: none;
         background-color: #f1f1f1;
         z-index: 2;
-        position: fixed;
+        position: relative;
         width: 100%;
         margin-top: 5px;
     }
@@ -88,14 +89,27 @@
     #contact-dropdown {
         display: none;
         position: absolute;
-        background-color: #f1f1f1;
+        background-color: #e7e7e7;
         z-index: 999;
         padding-left: 15px;
         width: 100%;
     }
 
     .mobile-header-link {
-        color:#9cb696;
+        color: #7c9b75;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .header-text {
+        color: #fff;
+        margin-top: 5px;
+        font-style: italic;
+    }
+
+    .header-text-area {
+        display: flex;
+        align-items: center;
     }
 </style>
 
@@ -104,7 +118,8 @@
     <div class="navigation-mobile visible-xs">
         <div class="container mobile-nav-container">
             <div class="row mobile-nav-row">
-                <div class="col-xs-10">
+                <div class="col-xs-10 text-left header-text-area">
+                    <span class="header-text">Welcome to the new site! Keep an eye out for upcoming events this summer.</span>
                 </div>
                 <div class="col-xs-2 flexbox-container mobile-nav-items" onclick="hamburgerClick()">
                     <i class="fa-hamburger fa fa-bars"></i>
@@ -112,56 +127,60 @@
             </div>
         </div>
         <div id="navLinks">
-            <a class="drop-link" id="park-heading" onclick="parkClick()">OUR PARK</a>
+            <a class="drop-link" id="park-heading" onclick="toggleDropdown('park-dropdown', 'park-heading')">OUR
+                PARK</a>
             <div id="park-dropdown">
                 <div class="col-xs-6">
-                    <a class = "mobile-header-link" href="/about">ABOUT THE PARK</a>
+                    <a class="mobile-header-link" href="/about">ABOUT</a>
                 </div>
                 <div class="col-xs-6">
-                    <a class = "mobile-header-link" href="/maps">MAPS</a>
+                    <a class="mobile-header-link" href="/maps">MAPS</a>
                 </div>
                 <div class="col-xs-6">
-                    <a class = "mobile-header-link" href="/trails">TRAILS</a>
+                    <a class="mobile-header-link" href="/trails">TRAILS</a>
                 </div>
                 <div class="col-xs-6">
-                    <a class = "mobile-header-link" href="/facilities">PARK FACILITIES</a>
+                    <a class="mobile-header-link" href="/facilities">FACILITIES</a>
                 </div>
             </div>
-            <a class="drop-link" id="events-heading" onclick="eventsClick()">EVENTS</a>
+            <a class="drop-link" id="events-heading"
+                onclick="toggleDropdown('events-dropdown', 'events-heading')">EVENTS</a>
             <div id="events-dropdown">
                 <div class="col-xs-6 text-center">
-                    <a class = "mobile-header-link" href="/events">SPECIAL EVENTS</a>
+                    <a class="mobile-header-link" href="/events">EVENTS</a>
                 </div>
                 <div class="col-xs-6 text-center">
-                    <a class = "mobile-header-link" href="/activities">ACTIVITIES</a>
+                    <a class="mobile-header-link" href="/activities">ACTIVITIES</a>
                 </div>
                 <div class="col-xs-12 text-center">
-                    <a class = "mobile-header-link" href="/raffle">ANNUAL RAFFLE</a>
+                    <a class="mobile-header-link" href="/raffle">RAFFLE</a>
                 </div>
             </div>
             <a class="drop-link" href="/membership">MEMBERSHIP</a>
-            <a class="drop-link" id="info-heading" onclick="infoClick()">OTHER INFO</a>
+            <a class="drop-link" id="info-heading" onclick="toggleDropdown('info-dropdown', 'info-heading')">OTHER
+                INFO</a>
             <div id="info-dropdown">
                 <div class="col-xs-6">
-                    <a class = "mobile-header-link" href="/board">BOARD</a>
+                    <a class="mobile-header-link" href="/board">BOARD</a>
                 </div>
                 <div class="col-xs-6">
-                    <a class = "mobile-header-link" href="/contributions">SPECIAL THANKS</a>
+                    <a class="mobile-header-link" href="/contributions">CONTRIBUTIONS</a>
                 </div>
                 <div class="col-xs-6">
-                    <a class = "mobile-header-link" href="/get-involved">GET INVOLVED</a>
+                    <a class="mobile-header-link" href="/get-involved">INVOLVEMENT</a>
                 </div>
                 <div class="col-xs-6">
-                    <a class = "mobile-header-link" href="/links">LINKS</a>
+                    <a class="mobile-header-link" href="/links">LINKS</a>
                 </div>
             </div>
-            <a class="drop-link" id="contact-heading" onclick="contactClick()">CONTACT US</a>
+            <a class="drop-link" id="contact-heading"
+                onclick="toggleDropdown('contact-dropdown', 'contact-heading')">CONTACT US</a>
             <div id="contact-dropdown">
                 <div class="col-xs-6">
-                    <a href="/contact">CONTACT</a>
+                    <a class="mobile-header-link" href="/contact">CONTACT</a>
                 </div>
                 <div class="col-xs-6">
-                    <a href="/volunteer">VOLUNTEER</a>
+                    <a class="mobile-header-link" href="/volunteer">VOLUNTEER</a>
                 </div>
             </div>
         </div>
@@ -221,68 +240,120 @@
         if (x.style.display === "block")
         {
             x.style.display = "none";
+            //document.body.style.overflowY = 'visible';
         } else
         {
             x.style.display = "block";
+            //document.body.style.overflowY = 'hidden';
         }
     }
 
     function parkClick()
     {
-        var x = document.getElementById("park-dropdown");
-        var y = document.getElementById("park-heading");
-        if (x.style.display === "block")
+        var park = document.getElementById("park-dropdown");
+        var header = document.getElementById("park-heading");
+        if (park.style.display === "block")
         {
-            x.style.display = "none";
-            y.style.color = "#202020";
-            y.style.fontWeight = 400;
+            park.style.display = "none";
+            header.style.color = "#202020";
+            header.style.fontWeight = 400;
         } else
         {
-            x.style.display = "block";
-            y.style.color = "#4e7c48";
-            y.style.fontWeight = 600;
+            park.style.display = "block";
+            header.style.color = "#4e7c48";
+            header.style.fontWeight = 600;
         }
     }
 
     function eventsClick()
     {
-        var x = document.getElementById("events-dropdown");
-        if (x.style.display === "block")
+        var events = document.getElementById("events-dropdown");
+        var header = document.getElementById("events-heading");
+        if (events.style.display === "block")
         {
-            x.style.display = "none";
+            events.style.display = "none";
+            header.style.color = "#202020";
+            header.style.fontWeight = 400;
         } else
         {
-            x.style.display = "block";
+            events.style.display = "block";
+            header.style.color = "#4e7c48";
+            header.style.fontWeight = 600;
         }
-
-        var y = document.getElementById("events-heading");
     }
 
-    function infoClick()
+    function infoClick(abc, abc2)
     {
-        var x = document.getElementById("info-dropdown");
-        if (x.style.display === "block")
+        console.log(abc);
+        console.log(abc2);
+        var info = document.getElementById("info-dropdown");
+        var header = document.getElementById("info-heading");
+        if (info.style.display === "block")
         {
-            x.style.display = "none";
+            info.style.display = "none";
+            header.style.color = "#202020";
+            header.style.fontWeight = 400;
         } else
         {
-            x.style.display = "block";
+            info.style.display = "block";
+            header.style.color = "#4e7c48";
+            header.style.fontWeight = 600;
         }
-
-        var y = document.getElementById("info-heading");
     }
 
     function contactClick()
     {
-        var x = document.getElementById("contact-dropdown");
-        if (x.style.display === "block")
+        var contact = document.getElementById("contact-dropdown");
+        var header = document.getElementById("contact-heading");
+        if (v.style.display === "block")
         {
-            x.style.display = "none";
+            contact.style.display = "none";
+            header.style.color = "#202020";
+            header.style.fontWeight = 400;
         } else
         {
-            x.style.display = "block";
+            contact.style.display = "block";
+            header.style.color = "#4e7c48";
+            header.style.fontWeight = 600;
         }
-
-        var y = document.getElementById("contact-heading");
     }
+
+
+    var activeDropdown = null; // Keep track of the active dropdown
+
+    function toggleDropdown(dropdownId, headingId)
+    {
+        var dropdown = document.getElementById(dropdownId);
+        var header = document.getElementById(headingId);
+
+        if (dropdown.style.display === "block")
+        {
+            // Hide the dropdown
+            dropdown.style.display = "none";
+            header.style.color = "#202020";
+            header.style.backgroundColor = "#f1f1f1";
+            header.style.fontWeight = 400;
+            activeDropdown = null;
+        } else
+        {
+            // Hide the active dropdown (if any)
+            if (activeDropdown !== null)
+            {
+                activeDropdown.style.display = "none";
+                var activeHeader = document.getElementById(activeDropdown.id.replace("-dropdown", "-heading"));
+                activeHeader.style.backgroundColor = "#f1f1f1";
+                activeHeader.style.color = "#202020";
+                activeHeader.style.fontWeight = 400;
+            }
+
+            // Show the clicked dropdown
+            dropdown.style.display = "block";
+            header.style.color = "#4e7c48";
+            header.style.backgroundColor = "#e7e7e7";
+            header.style.fontWeight = 600;
+            activeDropdown = dropdown;
+        }
+    }
+
+
 </script>
