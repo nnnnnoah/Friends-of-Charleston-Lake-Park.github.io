@@ -323,6 +323,12 @@ h1 {
     font-size: 14px;
 }
 
+@media(max-width:767px){
+    .footer span {
+        font-size: 16px;
+    }
+}
+
 .footer {
     background: #212121;
     color: #fff;
