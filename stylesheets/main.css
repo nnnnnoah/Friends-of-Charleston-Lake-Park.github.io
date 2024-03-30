@@ -534,3 +534,8 @@ input[type=submit]:hover {
 input {
     border:1px #aaa solid;
 }
+
+.green-bold {
+    color:#3f6344;
+    font-weight:600;
+}
