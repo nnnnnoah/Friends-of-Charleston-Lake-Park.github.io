@@ -252,7 +252,7 @@ h1 {
 */
 
 .logo {
-    max-width: 50%;
+    max-width: 40%;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -421,7 +421,7 @@ form {
     }
 }
 
-input[type=submit] {
+input[type=submit], .btn {
     padding: 5px;
     padding-left: 20px;
     padding-right: 20px;
@@ -433,16 +433,28 @@ input[type=submit] {
     transition: all .5s;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover, .btn:hover{
     background: rgb(63, 99, 68);
     background: linear-gradient(0deg, rgb(77, 121, 83) 0%, rgb(77, 146, 86) 100%);
     transition: all .5s;
+}
+
+.btn {
+    color: #fff !important;
+    text-decoration:none !important;
+    font-weight:400 !important;
 }
 
 .sandstone-img {
     width: 40%;
     float: right;
     margin-left: 10px;
+}
+
+table{
+    width:30%;
+    /* margin-right:auto;
+    margin-left:auto; */
 }
 
 @media(max-width:767px) {
@@ -455,6 +467,10 @@ input[type=submit]:hover {
 
     h3 {
         line-height: 32px;
+    }
+
+    table{
+        width:100%;
     }
 }
 
