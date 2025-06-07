@@ -1,205 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/constants.css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700,900|Open+Sans:400,500,600,700,900&display=swap"
-        rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/constants.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oxygen:400,700,900|Open+Sans:400,500,600,700,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Membership - Friends of Charleston Lake Park</title>
-    <noscript>This website will not function without JavaScript. Please update your browser to support this website's
-        functionality.</noscript>
+    <noscript
+      >This website will not function without JavaScript. Please update your
+      browser to support this website's functionality.</noscript
+    >
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="scripts/script.js"></script>
     <style>
-        body {
-            opacity: 0;
-            transition: opacity 1s;
-        }
+      body {
+        opacity: 0;
+        transition: opacity 1s;
+      }
 
-        @media(min-width:768px) {
-
-            #city,
-            #state_province,
-            #zip_postal,
-            #country {
-                margin-top: 10px;
-            }
+      @media (min-width: 768px) {
+        #city,
+        #state_province,
+        #zip_postal,
+        #country {
+          margin-top: 10px;
         }
+      }
     </style>
-</head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3BGE2XF767"></script>
-<script>
+  </head>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-3BGE2XF767"
+  ></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-    gtag('config', 'G-3BGE2XF767');
-</script>
+    gtag("config", "G-3BGE2XF767");
+  </script>
 
-<body onload="document.body.style.opacity='1'">
+  <body onload="document.body.style.opacity='1'">
     <div id="header-placeholder"></div>
 
     <div id="page-content">
-        <div class="container mb40">
-            <div class="row mt30">
-                <div class="col-xs-12 text-center">
-                    <h2 class="mb20">Membership</h2>
-                </div>
-            </div>
-            <div class="row mt30">
-                <div class="col-xs-12">
-                    <p>Did you know that the Park's educational activities and general operations are 80% funded by user
-                        fees and fund-raising by the Friends? We NEED your help!</p>
-                    <p>Please, join the Friends. Complete the application form below or submit to <a
-                            href="mailto:info@friendsofcharlestonlakepark.ca?cc=stevepage@kos.net?cc=foclptreasurer@1000island.net">info@friendsofcharlestonlakepark.ca</a>.
-                    </p>
-                    <p>Your membership in the Friends would be highly valued. While we would welcome your getting
-                        involved in our various activities, membership can also just be supportive of our work for users
-                        of the Parks, be they campers, hikers or day visitors.</p>
-
-                    <p><b>Membership is very reasonable: $20 for an individual and $25 for a family annually. For
-                            businesses, the rate is $50 annually.</b></p>
-                    <h4 class="mt40"><u>Donate to the Friends</u></h4>
-                    <p>The Friends is a registered charitable organization. Any donation you make over $10 will receive
-                        a tax receipt. Donations are welcome. They help us:</p>
-                    <ul>
-                        <li>Buy equipment for Park naturalist and educational programs to supplement public (and always
-                            scarce) funds</li>
-                        <li>Support even more our unique species research programs</li>
-                        <li>Be ready when the opportunity arises to contribute to land acquisition to expand the Park
-                            and conserve even more of this beautiful part of the world</li>
-                        <li>Support entertainment and cultural programming for the campers and the community</li>
-                    </ul>
-                    <p class="mt20">If you are considering a donation and would like to discuss it, get in touch with us
-                        at <a
-                            href="mailto:info@friendsofcharlestonlakepark.ca?cc=stevepage@kos.net?cc=foclptreasurer@1000island.net">info@friendsofcharlestonlakepark.ca</a>.
-                        Large donations can be set aside at
-                        the direction of the donor for a specific project.</p>
-                </div>
-            </div>
-            <div class="row mt30">
-                <div class="col-xs-12">
-                    <h3 class="text-center">Become a Member</h3>
-                </div>
-            </div>
-
-            <div class="row mt30">
-                <div class="col-xs-12">
-                    <div class="form-container">
-                        <form action="https://formsubmit.co/foclptreasurer@1000island.net" method="POST">
-                            <div class="col-xs-12">
-                                <label for="name">Name <span style="color:red;">*</span></label><br>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="first" name="first" placeholder="First" required>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="last" name="last" placeholder="Last" required>
-                            </div>
-                            <div class="col-xs-12 mt30">
-                                <label for="address">Address <span style="color:red;">*</span></label><br>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="line1" name="line1" placeholder="Line 1" required>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="line2" name="line2" placeholder="Line 2 (optional)">
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="city" name="city" placeholder="City" required>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="state_province" name="state/province"
-                                    placeholder="State / Province">
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="zip_postal" name="zip/postal" placeholder="ZIP / Postal Code">
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="country" name="country" placeholder="Country">
-                            </div>
-                            <div class="col-xs-12 mt30">
-                                <label for="address">Contact <span style="color:red;">*</span></label><br>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="email" name="email" placeholder="Email" required>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 mt30">
-                                <label for="address">Membership <span style="color:red;">*</span></label><br>
-                                <input type="radio" id="individual" name="subscription" value="10">
-                                <label for="individual">Individual ($20)</label><br>
-
-                                <input type="radio" id="family" name="subscription" value="15">
-                                <label for="family">Family ($25)</label><br>
-
-                                <input type="radio" id="corporate" name="subscription" value="50">
-                                <label for="corporate">Corporate ($50)</label>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 mt30">
-                                <label for="address">I/We would also like to donate:</label><br>
-                                <input type="text" id="donation" name="donation" placeholder="Donation ($)">
-                            </div>
-                            <div class="col-xs-12 mt30 text-center">
-                                <label for="address">Confirmation <span style="color:red;">*</span></label><br>
-                            </div>
-                            <div class="col-xs-12">
-                                <input type="text" id="signature" name="signature" placeholder="Signature"
-                                    required><br><br>
-                                <input type="checkbox" id="discussion" name="involvement">
-                                <label for="discussion" class="hidden-xs">I would like to discuss my involvement. Please
-                                    contact me.</label>
-                                <label for="discussion" class="visible-xs">I would like to discuss my
-                                    involvement.</label>
-                            </div>
-                            <div class="col-xs-12 mt30 text-center">
-                                <input type="submit" value="Submit">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mt30">
-                <div class="col-xs-12">
-                    <p class="text-center">Cheques should be made payable to the <b>"Friends of Charleston Lake
-                            Park"</b> and sent to the Park address:</p>
-                </div>
-                <div class="col-xs-12 col-sm-5 col-sm-offset-1 pl40">
-                    <p class="mt20 mb5">Friends of Charleston Lake Park</p>
-                    <p class="mb5">148 Woodvale Road</p>
-                    <p class="mb5">RR 4</p>
-                    <p class="mb5">Lansdowne ON, K0E 1L0</p>
-
-                    <p class="mt20">e-Transfers should be sent to:
-                    <p class="mb5"><b><a
-                                href="mailto:foclptreasurer@1000island.net">foclptreasurer@1000island.net</a></b></p>
-                    <p><i>No password required. For income tax receipts to be issued please provide your contact
-                            information.</i></p>
-                </div>
-            </div>
+      <div class="container mb40">
+        <div class="row mt30">
+          <div class="col-xs-12 text-center">
+            <h2 class="mb20">Membership</h2>
+          </div>
         </div>
+        <div class="row mt30">
+          <div class="col-xs-12">
+            <p>
+              Did you know that the Park's educational activities and general
+              operations are 80% funded by user fees and fund-raising by the
+              Friends? We NEED your help!
+            </p>
+            <p>
+              Please, join the Friends. Complete the application form below or
+              submit to
+              <a
+                href="mailto:info@friendsofcharlestonlakepark.ca?cc=vicki.kohse@gmail.com?cc=foclptreasurer@1000island.net"
+                >info@friendsofcharlestonlakepark.ca</a
+              >.
+            </p>
+            <p>
+              Your membership in the Friends would be highly valued. While we
+              would welcome your getting involved in our various activities,
+              membership can also just be supportive of our work for users of
+              the Parks, be they campers, hikers or day visitors.
+            </p>
+
+            <p>
+              <b
+                >Membership is very reasonable: $20 for an individual and $25
+                for a family annually. For businesses, the rate is $50
+                annually.</b
+              >
+            </p>
+            <h4 class="mt40"><u>Donate to the Friends</u></h4>
+            <p>
+              The Friends is a registered charitable organization. Any donation
+              you make over $10 will receive a tax receipt. Donations are
+              welcome. They help us:
+            </p>
+            <ul>
+              <li>
+                Buy equipment for Park naturalist and educational programs to
+                supplement public (and always scarce) funds
+              </li>
+              <li>Support even more our unique species research programs</li>
+              <li>
+                Be ready when the opportunity arises to contribute to land
+                acquisition to expand the Park and conserve even more of this
+                beautiful part of the world
+              </li>
+              <li>
+                Support entertainment and cultural programming for the campers
+                and the community
+              </li>
+            </ul>
+            <p class="mt20">
+              If you are considering a donation and would like to discuss it,
+              get in touch with us at
+              <a
+                href="mailto:info@friendsofcharlestonlakepark.ca?cc=vicki.kohse@gmail.com?cc=foclptreasurer@1000island.net"
+                >info@friendsofcharlestonlakepark.ca</a
+              >. Large donations can be set aside at the direction of the donor
+              for a specific project.
+            </p>
+          </div>
+        </div>
+        <div class="row mt30">
+          <div class="col-xs-12">
+            <h3 class="text-center">Become a Member</h3>
+          </div>
+        </div>
+
+        <div class="row mt30">
+          <div class="col-xs-12">
+            <div class="form-container">
+              <form
+                action="https://formsubmit.co/foclptreasurer@1000island.net"
+                method="POST"
+              >
+                <div class="col-xs-12">
+                  <label for="name"
+                    >Name <span style="color: red">*</span></label
+                  ><br />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="first"
+                    name="first"
+                    placeholder="First"
+                    required
+                  />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="last"
+                    name="last"
+                    placeholder="Last"
+                    required
+                  />
+                </div>
+                <div class="col-xs-12 mt30">
+                  <label for="address"
+                    >Address <span style="color: red">*</span></label
+                  ><br />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="line1"
+                    name="line1"
+                    placeholder="Line 1"
+                    required
+                  />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="line2"
+                    name="line2"
+                    placeholder="Line 2 (optional)"
+                  />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="city"
+                    name="city"
+                    placeholder="City"
+                    required
+                  />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="state_province"
+                    name="state/province"
+                    placeholder="State / Province"
+                  />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="zip_postal"
+                    name="zip/postal"
+                    placeholder="ZIP / Postal Code"
+                  />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="country"
+                    name="country"
+                    placeholder="Country"
+                  />
+                </div>
+                <div class="col-xs-12 mt30">
+                  <label for="address"
+                    >Contact <span style="color: red">*</span></label
+                  ><br />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    placeholder="Phone Number"
+                    required
+                  />
+                </div>
+                <div class="col-xs-12 col-sm-6 mt30">
+                  <label for="address"
+                    >Membership <span style="color: red">*</span></label
+                  ><br />
+                  <input
+                    type="radio"
+                    id="individual"
+                    name="subscription"
+                    value="10"
+                  />
+                  <label for="individual">Individual ($20)</label><br />
+
+                  <input
+                    type="radio"
+                    id="family"
+                    name="subscription"
+                    value="15"
+                  />
+                  <label for="family">Family ($25)</label><br />
+
+                  <input
+                    type="radio"
+                    id="corporate"
+                    name="subscription"
+                    value="50"
+                  />
+                  <label for="corporate">Corporate ($50)</label>
+                </div>
+                <div class="col-xs-12 col-sm-6 mt30">
+                  <label for="address">I/We would also like to donate:</label
+                  ><br />
+                  <input
+                    type="text"
+                    id="donation"
+                    name="donation"
+                    placeholder="Donation ($)"
+                  />
+                </div>
+                <div class="col-xs-12 mt30 text-center">
+                  <label for="address"
+                    >Confirmation <span style="color: red">*</span></label
+                  ><br />
+                </div>
+                <div class="col-xs-12">
+                  <input
+                    type="text"
+                    id="signature"
+                    name="signature"
+                    placeholder="Signature"
+                    required
+                  /><br /><br />
+                  <input type="checkbox" id="discussion" name="involvement" />
+                  <label for="discussion" class="hidden-xs"
+                    >I would like to discuss my involvement. Please contact
+                    me.</label
+                  >
+                  <label for="discussion" class="visible-xs"
+                    >I would like to discuss my involvement.</label
+                  >
+                </div>
+                <div class="col-xs-12 mt30 text-center">
+                  <input type="submit" value="Submit" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt30">
+          <div class="col-xs-12">
+            <p class="text-center">
+              Cheques should be made payable to the
+              <b>"Friends of Charleston Lake Park"</b> and sent to the Park
+              address:
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-5 col-sm-offset-1 pl40">
+            <p class="mt20 mb5">Friends of Charleston Lake Park</p>
+            <p class="mb5">148 Woodvale Road</p>
+            <p class="mb5">RR 4</p>
+            <p class="mb5">Lansdowne ON, K0E 1L0</p>
+
+            <p class="mt20">e-Transfers should be sent to:</p>
+            <p class="mb5">
+              <b
+                ><a href="mailto:foclptreasurer@1000island.net"
+                  >foclptreasurer@1000island.net</a
+                ></b
+              >
+            </p>
+            <p>
+              <i
+                >No password required. For income tax receipts to be issued
+                please provide your contact information.</i
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="footer-placeholder"></div>
 
     <script>
-        $(function ()
-        {
-            $("#header-placeholder").load("objects/header.html");
-            $("#footer-placeholder").load("objects/footer.html");
-        });
+      $(function () {
+        $("#header-placeholder").load("objects/header.html");
+        $("#footer-placeholder").load("objects/footer.html");
+      });
     </script>
-</body>
-
+  </body>
 </html>

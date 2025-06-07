@@ -1,131 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/constants.css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700,900|Open+Sans:400,500,600,700,900&display=swap"
-        rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/constants.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oxygen:400,700,900|Open+Sans:400,500,600,700,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Contact Us - Friends of Charleston Lake Park</title>
-    <noscript>This website will not function without JavaScript. Please update your browser to support this website's
-        functionality.</noscript>
+    <noscript
+      >This website will not function without JavaScript. Please update your
+      browser to support this website's functionality.</noscript
+    >
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="scripts/script.js"></script>
     <style>
-        @media(min-width:768px) {
-
-            #city,
-            #state_province,
-            #zip_postal,
-            #country {
-                margin-top: 10px;
-            }
+      @media (min-width: 768px) {
+        #city,
+        #state_province,
+        #zip_postal,
+        #country {
+          margin-top: 10px;
         }
+      }
     </style>
-</head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3BGE2XF767"></script>
-<script>
+  </head>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-3BGE2XF767"
+  ></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-    gtag('config', 'G-3BGE2XF767');
-</script>
+    gtag("config", "G-3BGE2XF767");
+  </script>
 
-<body onload="document.body.style.opacity='1'">
+  <body onload="document.body.style.opacity='1'">
     <div id="header-placeholder"></div>
 
     <div id="page-content">
-        <div class="container mb40">
-            <div class="row mt30">
-                <div class="col-xs-12 text-center">
-                    <h2 class="mb20">Contact Us</h2>
-                </div>
-            </div>
-            <div class="row mt30">
-                <div class="col-xs-12">
-                    <div class="text-center">
-                        <p>You cannot make campsite reservations through this site. For the Ontario Parks Reservation
-                            system, click <a href="https://www.ontarioparks.com/en" target="_blank">here</a>.</p>
-                        <p>If you want to discuss volunteering, or make a general enquiry, please connect with us at <a
-                                href="mailto:info@friendsofcharlestonlakepark.ca?cc=stevepage@kos.net">info@friendsofcharlestonlakepark.ca</a>
-                        </p>
-                        <br>
-                        <h4>To get in touch about the Park, about contributing or volunteering, just use this form:</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mt30">
-                <div class="col-xs-12">
-                    <div class="form-container">
-                        <form action="https://formsubmit.co/stevepage@kos.net" method="POST">
-                            <div class="col-xs-12">
-                                <label for="name">Name <span style="color:red;">*</span></label><br>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="first" name="first" placeholder="First" required>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="last" name="last" placeholder="Last" required>
-                            </div>
-                            <div class="col-xs-12 mt30">
-                                <label for="address">Address <span style="color:red;">*</span></label><br>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="line1" name="line1" placeholder="Line 1" required>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="line2" name="line2" placeholder="Line 2 (optional)">
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="city" name="city" placeholder="City" required>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="state_province" name="state/province"
-                                    placeholder="State / Province">
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="zip_postal" name="zip/postal" placeholder="ZIP / Postal Code">
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="country" name="country" placeholder="Country">
-                            </div>
-                            <div class="col-xs-12 mt30">
-                                <label for="address">Contact <span style="color:red;">*</span></label><br>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="email" name="email" placeholder="Email" required>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
-                            </div>
-                            <div class="col-xs-12 mt30 text-center">
-                                <input type="submit" value="Submit">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+      <div class="container mb40">
+        <div class="row mt30">
+          <div class="col-xs-12 text-center">
+            <h2 class="mb20">Contact Us</h2>
+          </div>
         </div>
+        <div class="row mt30">
+          <div class="col-xs-12">
+            <div class="text-center">
+              <p>
+                You cannot make campsite reservations through this site. For the
+                Ontario Parks Reservation system, click
+                <a href="https://www.ontarioparks.com/en" target="_blank"
+                  >here</a
+                >.
+              </p>
+              <p>
+                If you want to discuss volunteering, or make a general enquiry,
+                please connect with us at
+                <a
+                  href="mailto:info@friendsofcharlestonlakepark.ca?cc=vicki.kohse@gmail.com"
+                  >info@friendsofcharlestonlakepark.ca</a
+                >
+              </p>
+              <br />
+              <h4>
+                To get in touch about the Park, about contributing or
+                volunteering, just use this form:
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt30">
+          <div class="col-xs-12">
+            <div class="form-container">
+              <form
+                action="https://formsubmit.co/vicki.kohse@gmail.com"
+                method="POST"
+              >
+                <div class="col-xs-12">
+                  <label for="name"
+                    >Name <span style="color: red">*</span></label
+                  ><br />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="first"
+                    name="first"
+                    placeholder="First"
+                    required
+                  />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="last"
+                    name="last"
+                    placeholder="Last"
+                    required
+                  />
+                </div>
+                <div class="col-xs-12 mt30">
+                  <label for="address"
+                    >Address <span style="color: red">*</span></label
+                  ><br />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="line1"
+                    name="line1"
+                    placeholder="Line 1"
+                    required
+                  />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="line2"
+                    name="line2"
+                    placeholder="Line 2 (optional)"
+                  />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="city"
+                    name="city"
+                    placeholder="City"
+                    required
+                  />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="state_province"
+                    name="state/province"
+                    placeholder="State / Province"
+                  />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="zip_postal"
+                    name="zip/postal"
+                    placeholder="ZIP / Postal Code"
+                  />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="country"
+                    name="country"
+                    placeholder="Country"
+                  />
+                </div>
+                <div class="col-xs-12 mt30">
+                  <label for="address"
+                    >Contact <span style="color: red">*</span></label
+                  ><br />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    placeholder="Phone Number"
+                    required
+                  />
+                </div>
+                <div class="col-xs-12 mt30 text-center">
+                  <input type="submit" value="Submit" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="footer-placeholder"></div>
 
     <script>
-        $(function ()
-        {
-            $("#header-placeholder").load("objects/header.html");
-            $("#footer-placeholder").load("objects/footer.html");
-        });
+      $(function () {
+        $("#header-placeholder").load("objects/header.html");
+        $("#footer-placeholder").load("objects/footer.html");
+      });
     </script>
-</body>
-
+  </body>
 </html>
